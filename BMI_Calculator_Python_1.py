@@ -9,6 +9,8 @@ print("Good day to you!")
 time.sleep(1)
 name = input("What's your name? ")
 time.sleep(1)
+age = input("How old you are you? ")
+time.sleep(1)
 def personalized_greeting():
     """Adds user's name to greeting string"""
     print("Hi " + name + "!")
