@@ -1,5 +1,10 @@
 import time
 
+# Variables
+kg_to_lb = 2.204622
+bmi_goal = 21.5
+
+# Program
 print("Good day to you!")
 time.sleep(1)
 name = input("What's your name? ")
@@ -38,7 +43,8 @@ feet_inch_conv = int(height_feet) * 12
 meters = (feet_inch_conv + int(height_inches)) * float(0.0254)
 BMI_calc_float = kilograms/meters**2
 BMI_calc = round(BMI_calc_float, 1)
-Optimal_weight_calc = round(abs(21.5 - BMI_calc) * 2.20462) 
+# Optimal_weight_calc = round(abs(21.5 - BMI_calc) * 2.20462) 
+Optimal_weight_calc = round((BMI_calc - bmi_goal) * (meters ** 2) * (kg_to_lb))
 if BMI_calc < 18.5: 
     print(name , ", your BMI is ", BMI_calc, ", you are underweight. However, you are well on your way to achieving a healthy weight!", "Gaining ", Optimal_weight_calc, " more pounds will put you at your optimal weight. Keep working hard my friend.")
 if  BMI_calc >=18.5 and BMI_calc <= 24.9: 
